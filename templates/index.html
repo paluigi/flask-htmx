@@ -1,0 +1,45 @@
+<html>
+<header>
+  <script src="/static/js/htmx.js" type="text/javascript"></script>
+</header>
+
+<body>
+
+  <h1>
+    Test for Flask, HTMX and Websockets
+  </h1>
+  <h3>
+    Clock
+  </h3>
+  <div>
+    <p>Simple clock that update itself each 5 seconds using HTMX and Flask-Sock</p>
+  </div>
+
+  <div hx-ws="connect:/clock">
+    <div id="clock">
+      ...
+    </div>
+  </div>
+  <h3>
+    API
+  </h3>
+  <div>
+    <p>Information about a new API every 10 seconds using Requests, HTMX and Flask-Sock</p>
+    <p>API list provided by <a href="https://github.com/davemachado/public-api" target="_blank">public-apis</a></p>
+  </div>
+
+  <div hx-ws="connect:/api">
+    <div id="api">
+      ...
+    </div>
+  </div>
+  <h3>
+    Credits
+  </h3>
+  <div>
+    <p>HTMX <a href="https://htmx.org/" target="_blank">webpage</a> </p>
+    <p>Flask-Sock <a href="https://flask-sock.readthedocs.io/en/latest/index.html" target="_blank">documentation</a></p>
+  </div>
+
+</body>
+</html>
